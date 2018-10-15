@@ -17,7 +17,8 @@ sequelize
 
 //Define what models we want to load
 var models = [
-  'User'
+  'User',
+  'Post'
 ];
 
 //Loop over the model name list and load in each model
