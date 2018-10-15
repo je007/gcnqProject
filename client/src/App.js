@@ -42,6 +42,10 @@ class App extends Component {
             {
               this.state.response[0].username
             }
+             
+             {
+              this.state.response[0].post
+            }
           </a>
         </header>
       </div>
