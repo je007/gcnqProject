@@ -24,6 +24,15 @@ db.sequelize.sync({force: true}).then(() => {
     //get all the users and log the data returned
     
   });
+
+  db.Post.create({
+    Post: 'Test post data',
+    PostUser: 'Busyrich'
+  }).then(() => {
+    //After the user is created,
+    //get all the users and log the data returned
+    
+  });
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
