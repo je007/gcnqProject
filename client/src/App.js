@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PostForm from './PostForm';
+import AllPost from './AllPost';
 
 class App extends Component {
 
@@ -25,20 +26,25 @@ class App extends Component {
     return body;
   };
 
+  postFeed = async () => {
+    const newPost = await fetch('/post/:id');
+    //Needs to be completed
+  }
+  editPost = async () => {
+    const editPost = await fetch('/editPost/:id');
+    //Needs to be completed
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <h1>Food Feed</h1>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            <PostForm/>
+            <AllPost/>
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a>
             {
               this.state.response[0].username
             }
