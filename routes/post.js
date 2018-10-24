@@ -2,12 +2,18 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 
+const posts = [
+    {title:'Post One', postText:'asdfasdfsadfsadfsadf'},
+    {title:'Post TWo', postText:'asdfasdfsadfsadfsadf'},
+    {title:'Post Three', postText:'asdfasdfsadfsadfsadf'}
+];
+
 router.get('/', function (req, res, next) {
-    res.send('respond with a resource');
+    res.send(posts);
 });
 
-router.get('/post/:id', function (req, res) {
-    const userId = parseInt(req.params.id);
+router.get('/post', function (req, res) {
+    //const userId = parseInt(req.params.id);
 
     models.post.findOrCreate({
         where: {
@@ -74,3 +80,5 @@ router.delete('/editPost/:id/delete', (req, res) => {
             res.redirect('/post/:id')
         });
 });
+
+module.exports = router;

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import PostForm from './PostForm';
-import AllPost from './AllPost';
 
 class App extends Component {
 
@@ -26,14 +24,7 @@ class App extends Component {
     return body;
   };
 
-  postFeed = async () => {
-    const newPost = await fetch('/post/:id');
-    //Needs to be completed
-  }
-  editPost = async () => {
-    const editPost = await fetch('/editPost/:id');
-    //Needs to be completed
-  }
+
 
   render() {
     return (
@@ -41,8 +32,7 @@ class App extends Component {
         <header className="App-header">
         <h1>Food Feed</h1>
           <p>
-            <PostForm/>
-            <AllPost/>
+
           </p>
           <a>
             {
