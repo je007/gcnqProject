@@ -16,9 +16,10 @@ module.exports = function(sequelize, DataTypes) {
       postModel.hasMany(db.User, {
         alias: 'alias',
         as: 'key',
-        foreignKey: 'thumbnail_id'});
+        foreignKey: 'user_id'});
    //associations go here :-)
-}
+
+    }
 
     return postModel;
   }
