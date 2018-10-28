@@ -1,13 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Work Sans',sans-serif;
-  background:#f4f4ef;
+  font-family: 'Teko', sans-serif;
+  background: #D5DBDB;
+  font-weight: bold;
   }
   
   
   .center {
   text-align: center;
+  color: #3498DB;
+  font-weight: bold;
+  
   }
   a {
   color:#636363;
@@ -19,13 +23,15 @@ body {
   a:hover {
   text-decoration: underline;
   }
+
+  
   
   
   /* Navigation */
   
   
   .navbar {
-  background:#fff;
+  background:#A2D9CE  ;
   text-align:center;
   padding:1.5rem 0;
   width:100%;
@@ -47,12 +53,13 @@ body {
   
   /* Post Styles */
   .post-container {
-  background:#fff;
+  background:#A2D9CE;
   padding:50px;
   width:50%;
   margin:40px auto;
   box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
   font-family:'Work Sans',sans-serif;
+
   }
   
   
@@ -60,7 +67,7 @@ body {
   text-align:center;
   font-weight:400;
   font-size:40px;
-  color:#636363;
+  color:#3498DB;
   }
   
   
@@ -184,3 +191,8 @@ body {
   outline: none;
   color:#fff;
   }
+
+@font-face{
+  font-family: 'Teko', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Teko") 
+}
