@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 //You will need to create a database, Sequelize won't create it for us
 //Your user/pass might differ as well
 //user:pass@example.com/dbname
-const sequelize = new Sequelize('mysql://root:CaliLife@localhost/gcnq');
+const sequelize = new Sequelize('mysql://root:Root@localhost/gcnq');
 
 //Try to conenct and console if it worked or not
 sequelize
@@ -25,6 +25,10 @@ var models = [
 //We put them on module.exports so they can be imported easily
 models.forEach(function(model) {
   module.exports[model] = sequelize.import(__dirname + '/' + model.toLowerCase());
+});
+
+models.forEach(function(model) {
+  module.exports[model].associate(module.exports);
 });
 
 // export connection
