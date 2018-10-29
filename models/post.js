@@ -4,10 +4,10 @@ module.exports = function(sequelize, DataTypes) {
 
     //Simple model with a couple fields
     const postModel = sequelize.define('post', {
-      post_text: {
-        type: DataTypes.STRING
-      }
+      post_title: DataTypes.STRING,
+      post_text: DataTypes.STRING
     });
+    
     postModel.associate = db => {
       postModel.belongsTo(db.User, {
         alias: 'author',

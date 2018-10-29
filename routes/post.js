@@ -2,28 +2,25 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 
-const posts = [
-    {title:'Post One', postText:'asdfasdfsadfsadfsadf'},
-    {title:'Post TWo', postText:'asdfasdfsadfsadfsadf'},
-    {title:'Post Three', postText:'asdfasdfsadfsadfsadf'}
-];
-
 router.get('/', function (req, res, next) {
-    res.send(posts);
+    db.Post.findAll({
+        include: ['author']
+    }).then((posts) => {
+        res.send(posts);
+    });
 });
 
-router.get('/post', function (req, res) {
+router.post('/post', function (req, res) {
     //const userId = parseInt(req.params.id);
 
     models.post.findOrCreate({
         where: {
-            PostTitle: req.body.postTitle,
-            PostIngrediants: req.body.postIngrediants,
-            PostBody: req.body.postBody,
-            UserId: req.params.id
+            post_title: req.body.postTitle,
+            post_text: req.body.postText,
+            user_id: 1
         }
     }).then(post => {
-        res.redirect(req.originalUrl)
+        res.redirect(post)
     })
 });
 
