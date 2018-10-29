@@ -3,12 +3,22 @@
 module.exports = function(sequelize, DataTypes) {
 
     //Simple model with a couple fields
-    return sequelize.define('post', {
-      realName: {
-        type: DataTypes.STRING
-      },
-      username: {
+    const postModel = sequelize.define('post', {
+      post_text: {
         type: DataTypes.STRING
       }
     });
+    postModel.associate = db => {
+      postModel.belongsTo(db.User, {
+        alias: 'author',
+        as: 'author',
+        foreignKey: 'user_id',
+        otherKey: 'id'
+      });
+   //associations 
+   //    User.belongsTo(Post)
+    }
+
+    return postModel;
   }
+ 

@@ -3,7 +3,7 @@
 module.exports = function(sequelize, DataTypes) {
 
   //Simple model with a couple fields
-  return sequelize.define('user', {
+  const userModel = sequelize.define('user', {
     realName: {
       type: DataTypes.STRING
     },
@@ -11,4 +11,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING
     }
   });
+
+  userModel.associate = db => {
+      
+  }
+
+  return userModel;
 }
