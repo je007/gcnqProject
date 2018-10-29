@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
+
 class PostForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
@@ -13,10 +15,17 @@ class PostForm extends Component {
             steps,
             editing: false
         }
-        this.props.dispatch({
-            type: 'ADD_POST',
-            data
-        })
+
+        axios.post('http://localhost:5000/post', {
+            postTitle: title,
+            postText: message
+        }).then(res => {
+            this.props.dispatch({
+                type: 'ADD_POST',
+                data: res.data
+            });
+        });
+
         this.getTitle.value = '';
         this.getMessage.value = '';
         this.getSteps.value = '';

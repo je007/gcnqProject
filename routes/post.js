@@ -3,7 +3,7 @@ var router = express.Router();
 var models = require('../models');
 
 router.get('/', function (req, res, next) {
-    db.Post.findAll({
+    models.Post.findAll({
         include: ['author']
     }).then((posts) => {
         res.send(posts);
@@ -13,15 +13,16 @@ router.get('/', function (req, res, next) {
 router.post('/post', function (req, res) {
     //const userId = parseInt(req.params.id);
 
-    models.post.findOrCreate({
-        where: {
-            post_title: req.body.postTitle,
-            post_text: req.body.postText,
-            user_id: 1
-        }
+    models.Post.create({
+        post_title: req.body.postTitle,
+        post_text: req.body.postText,
+        user_id: 1
     }).then(post => {
-        res.redirect(post)
-    })
+        post.getAuthor().then(author => {
+            post.setDataValue('author', author);
+            res.send(post);
+        });
+    });
 });
 
 router.get('/editPost/:id', function (req, res) {
