@@ -20,19 +20,19 @@ db.sequelize.sync({force: true}).then(() => {
     realName: 'Dr. Mr. Richard Key III Esq.',
     username: 'Busyrich'
   }).then(() => {
-    //After the user is created,
-    //get all the users and log the data returned
-    
+    db.Post.create({
+      post_text: 'Test post data',
+      user_id: 1
+    }).then(() => {
+      db.Post.findAll({
+        include: ['author']
+      }).then((posts) => {
+        console.log(posts[0].get());
+      });
+    });
   });
 
-  db.Post.create({
-    Post: 'Test post data',
-    PostUser: 'Busyrich'
-  }).then(() => {
-    //After the user is created,
-    //get all the users and log the data returned
-    
-  });
+
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

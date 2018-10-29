@@ -4,22 +4,19 @@ module.exports = function(sequelize, DataTypes) {
 
     //Simple model with a couple fields
     const postModel = sequelize.define('post', {
-      post_id: {
-        type: DataTypes.STRING,
-      },
-        posttext: {
-        type: DataTypes.STRING
-      },
-      user_id: {
+      post_text: {
         type: DataTypes.STRING
       }
     });
     postModel.associate = db => {
-      postModel.hasMany(db.User, {
-        alias: 'alias',
-        as: 'key',
-        foreignKey: 'user_id'});
-   //associations go here :-)
+      postModel.belongsTo(db.User, {
+        alias: 'author',
+        as: 'author',
+        foreignKey: 'user_id',
+        otherKey: 'id'
+      });
+   //associations 
+   //    User.belongsTo(Post)
     }
 
     return postModel;
