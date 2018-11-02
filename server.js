@@ -27,7 +27,7 @@ db.sequelize.sync({force: true}).then(() => {
     username: 'Busyrich'
   }).then(() => {
     db.Post.create({
-      post_title: 'Super Mega Tasty Awesome Recipe Title #1',
+      post_title: 'Super Mega Tasty Awesome Recipe Title',
       post_ingredients: 'Test post data',
       post_steps: 'Make the thing',
       user_id: 1

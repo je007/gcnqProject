@@ -3,56 +3,6 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 
 class EditComponent extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.onChangeTitle = this.onChangeTitle.bind(this);
-  //   this.onChangeIngredients = this.onChangeIngredients.bind(this);
-  //   this.onChangeSteps = this.onChangeSteps.bind(this);
-  //
-  //   this.state = {title: '', ingredients: '', steps: ''};
-  // }
-  //
-  // componentDidMount() {
-  //   axios.get('http://localhost:5000/editPost/:id')
-  //     .then(response => {
-  //       this.setState({ title: response.data.title, ingredients: response.data.ingredients, steps: response.data.steps });
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     })
-  // }
-  //
-  // onChangeTitle(e) {
-  //   this.setState({
-  //     title: e.target.value
-  //   });
-  // }
-  // onChangeIngredients(e) {
-  //   this.setState({
-  //     ingredients: e.target.value
-  //   });
-  // }
-  // onChangeSteps(e) {
-  //   this.setState({
-  //     steps: e.target.value
-  //   });
-  // }
-  // onSubmit(e) {
-  //   e.preventDefault();
-  //   const serverport = {
-  //     title: this.state.title,
-  //     ingredients: this.state.ingredients,
-  //     steps: this.state.steps
-  //   }
-  //   axios.post('http://localhost:5000/edit/:id', serverport)
-  //   .then(res => console.log(res.data));
-  //   this.setState({
-  //     title: '',
-  //     ingredients: '',
-  //     steps: ''
-  //   })
-  //
-  // }
     handleEdit = (e) => {
         e.preventDefault();
         const newTitle = this.getTitle.value;
@@ -81,8 +31,6 @@ class EditComponent extends Component {
         this.getIngredients.value = '';
         this.getSteps.value = '';
     }
-
-        //this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
 
     render() {
         return (
