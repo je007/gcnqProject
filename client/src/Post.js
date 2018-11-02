@@ -6,8 +6,8 @@ class Post extends Component {
             <div className="post">
                 <h2 className="post_title">{this.props.post.post_title}</h2>
                 <h3 className="post_author">By {this.props.post.author.realName}</h3>
-                <h3 className="post_message">Ingredients:</h3>
-                <p className="post_message">{this.props.post.post_text}</p>
+                <h3 className="post_ingredients">Ingredients:</h3>
+                <p className="post_ingredients">{this.props.post.post_ingredients}</p>
                 <h3 classname="post_steps">Directions:</h3>
                 <p className="post_steps">{this.props.post.post_steps}</p>
                 <div className="control-buttons">

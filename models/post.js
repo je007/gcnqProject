@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     //Simple model with a couple fields
     const postModel = sequelize.define('post', {
       post_title: DataTypes.STRING,
-      post_text: DataTypes.STRING,
+      post_ingredients: DataTypes.STRING,
       post_steps: DataTypes.STRING
     });
     
