@@ -18,7 +18,8 @@ class PostForm extends Component {
 
         axios.post('http://localhost:5000/post', {
             postTitle: title,
-            postText: message
+            postText: message,
+            postSteps: steps
         }).then(res => {
             this.props.dispatch({
                 type: 'ADD_POST',

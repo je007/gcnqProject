@@ -16,6 +16,7 @@ router.post('/post', function (req, res) {
     models.Post.create({
         post_title: req.body.postTitle,
         post_text: req.body.postText,
+        post_steps: req.body.postSteps,
         user_id: 1
     }).then(post => {
         post.getAuthor().then(author => {
