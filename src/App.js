@@ -12,7 +12,7 @@ class App extends Component {
         </div>
         <PostForm />
         <AllPost />
-        
+        <img className="pie" src="https://media.giphy.com/media/2ykpw7bOysvGo/giphy.gif" height="285" width="385"/>
       </div>
     );
   }

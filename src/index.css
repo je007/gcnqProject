@@ -13,6 +13,15 @@ body {
   font-weight: bold;
   
   }
+
+  .pie {
+    text-align: center;
+    justify-content: center;
+  align-items: center;
+  display:flex;
+  margin-left: 475px;
+  }
+
   a {
   color:#636363;
   text-decoration: none;
@@ -45,9 +54,12 @@ body {
   .navbar h2 {
   margin:0;
   font-weight:200;
-  font-size:30px;
+  font-size:100px;
   letter-spacing: 4px;
-  font-family:'Work Sans',sans-serif;
+  font-family: 'Pacifico', cursive;
+  border: 6px solid #BABABA;
+  padding-left: 100px;
+  padding-right: 100px;
   }
   
   
@@ -58,8 +70,7 @@ body {
   width:50%;
   margin:40px auto;
   box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
-  font-family:'Work Sans',sans-serif;
-
+  font-family: 'Pacifico', cursive;
   }
   
   
@@ -68,6 +79,8 @@ body {
   font-weight:400;
   font-size:40px;
   color:#3498DB;
+  font-family: 'Pacifico', cursive;
+  
   }
   
   
@@ -128,6 +141,7 @@ body {
   padding:30px;
   margin-bottom:20px;
   box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
+  font-family: 'Varela Round', sans-serif;
   }
   
   
