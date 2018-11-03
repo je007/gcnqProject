@@ -12,7 +12,7 @@ const postReducer = (state = [], action) => {
                     return {
                         ...post,
                         title: action.data.newTitle,
-                        message: action.data.newMessage,
+                        ingredients: action.data.newIngredients,
                         steps: action.data.newSteps,
                         editing: !post.editing
                     }
