@@ -1,5 +1,5 @@
 const postReducer = (state = [], action) => {
-    switch (action.type) {    
+    switch (action.type) {
         case 'ADD_POST':
             return state.concat([action.data])
         case 'DELETE_POST':
@@ -12,7 +12,7 @@ const postReducer = (state = [], action) => {
                     return {
                         ...post,
                         title: action.data.newTitle,
-                        message: action.data.newMessage,
+                        ingredients: action.data.newIngredients,
                         steps: action.data.newSteps,
                         editing: !post.editing
                     }

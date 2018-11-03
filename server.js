@@ -7,6 +7,7 @@ const port = process.env.PORT || 5000;
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
   next();
 });
 
@@ -19,6 +20,7 @@ app.use('/', postRoutes);
 //This will sync the model structure with the database
 //Be careful, the force:true will destory the tables and recreate them
 //This is useful for testing but not something you want in production
+<<<<<<< HEAD
 db.sequelize.sync({force: true}).then(() => {
   
   // Create a test user
@@ -35,6 +37,23 @@ db.sequelize.sync({force: true}).then(() => {
       console.log('Test Data Added.');
     });
   });
+=======
+db.sequelize.sync({alter:true}).then(() => {
+
+//   db.User.create({
+//     realName: 'The Elustrious Dr. Mr. Richard Key III Esq.',
+//     username: 'Busyrich'
+//   }).then(() => {
+//     db.Post.create({
+//       post_title: 'Super Mega Tasty Awesome Recipe Title',
+//       post_ingredients: 'Test post data',
+//       post_steps: 'Make the thing',
+//       user_id: 1
+//     }).then(() => {
+//       console.log('Test Data Added.');
+//     });
+//   });
+>>>>>>> d50792a74514c74ee3480e0446aca76e2bc3d00d
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -1,14 +1,16 @@
-//We need to export a function that we can use to easily import
-//our model later
 module.exports = function(sequelize, DataTypes) {
 
-    //Simple model with a couple fields
     const postModel = sequelize.define('post', {
       post_title: DataTypes.STRING,
       post_ingredients: DataTypes.STRING,
       post_steps: DataTypes.STRING
+<<<<<<< HEAD
+=======
+    }, {
+      paranoid: true
+>>>>>>> d50792a74514c74ee3480e0446aca76e2bc3d00d
     });
-    
+
     postModel.associate = db => {
       postModel.belongsTo(db.User, {
         alias: 'author',
@@ -16,10 +18,9 @@ module.exports = function(sequelize, DataTypes) {
         foreignKey: 'user_id',
         otherKey: 'id'
       });
-   //associations 
+   //associations
    //    User.belongsTo(Post)
     }
 
     return postModel;
   }
- 

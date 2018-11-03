@@ -11,7 +11,6 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/post', function (req, res) {
-    //const userId = parseInt(req.params.id);
 
     models.Post.create({
         post_title: req.body.postTitle,
@@ -26,35 +25,35 @@ router.post('/post', function (req, res) {
     });
 });
 
-router.get('/editPost/:id', function (req, res) {
-    let postId = parseInt(req.params.id);
-    models.post
+router.get('/editPost/:id', function (req, res, next) {
+    let post_id = parseInt(req.params.id);
+    models.Post
         .find({
             where: {
-                PostId: postId
+                post_id: postId
             }
         })
         .then(post => {
-            res.render('editPost', {
-                PostTitle: req.body.postTitle,
-                PostIngrediants: req.body.postIngrediants,
-                PostBody: req.body.postBody,
-                PostId: post.PostId,
-                UserId: req.params.id
+            res.render('Post', {
+                post_title: req.body.postTitle,
+                post_ingredients: req.body.postIngredients,
+                post_steps: req.body.postSteps,
+                user_id: 1,
+                id: postId
             })
         })
 })
 
 router.put('/editPost/:id', (req, res) => {
     let postId = parseInt(req.params.id);
-    models.post
+    models.Post
         .update({
-            PostTitle: req.body.postTitle,
-            PostIngrediants: req.body.postIngrediants,
-            PostBody: req.body.postBody
+            post_title: req.body.postTitle,
+            post_ingredients: req.body.postIngredients,
+            post_steps: req.body.postSteps
         }, {
                 where: {
-                    PostId: postId
+                    id: postId
                 }
             })
         .then(result => {
@@ -63,20 +62,19 @@ router.put('/editPost/:id', (req, res) => {
 });
 
 router.delete('/editPost/:id/delete', (req, res) => {
-    let postId = parseInt(re.params.id);
-    models.post
-        .update(
-            {
-                Deleted: 'true'
-            },
+    let postId = parseInt(req.params.id);
+    models.Post
+        .destroy(
             {
                 where: {
-                    PostId: postId
+                    id: postId
                 }
-            }
-        )
+            })
+        // .then(result => {
+        //   res.send("deleted");
+        // })
         .then(post => {
-            res.redirect('/post/:id')
+            res.send();
         });
 });
 
