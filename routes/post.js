@@ -64,10 +64,7 @@ router.put('/editPost/:id', (req, res) => {
 router.delete('/editPost/:id/delete', (req, res) => {
     let postId = parseInt(req.params.id);
     models.Post
-        .update(
-            {
-                Deleted: 'true'
-            },
+        .destroy(
             {
                 where: {
                     id: postId
@@ -77,7 +74,7 @@ router.delete('/editPost/:id/delete', (req, res) => {
         //   res.send("deleted");
         // })
         .then(post => {
-            res.redirect('/')
+            res.send();
         });
 });
 

@@ -4,6 +4,8 @@ module.exports = function(sequelize, DataTypes) {
       post_title: DataTypes.STRING,
       post_ingredients: DataTypes.STRING,
       post_steps: DataTypes.STRING
+    }, {
+      paranoid: true
     });
 
     postModel.associate = db => {
