@@ -15,14 +15,26 @@ class Post extends Component {
   }
 
     render() {
+      const ingredientString = this.props.post.post_ingredients;
+      const ingredientSplit = ingredientString.split(', ');
+      const ingredientList = ingredientSplit.map((ingredient) =>
+        <li>{ingredient}</li>
+      );
+
+      const stepString = this.props.post.post_steps;
+      const stepSplit = stepString.split(', ');
+      const stepList = stepSplit.map((step) =>
+        <li>{step}</li>
+      );
+
         return (
             <div key={this.props.post.id} className="post">
                 <h2 className="post_title">{this.props.post.post_title}</h2>
                 <h3 className="post_author">By: {this.props.post.author.realName}</h3>
                 <h3 className="post_ingredients">Ingredients:</h3>
-                <p className="post_ingredients">{this.props.post.post_ingredients}</p>
+                <p className="post_ingredients" >{ingredientList}</p>
                 <h3 className="post_steps">Directions:</h3>
-                <p className="post_steps">{this.props.post.post_steps}</p>
+                <p className="post_steps">{stepList}</p>
                 <div className="control-buttons">
                     <button className="edit"
                         onClick={() => this.props.dispatch({ type: 'EDIT_POST', id: this.props.post.id })
