@@ -1,4 +1,4 @@
-/* body {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Work Sans',sans-serif;
@@ -9,6 +9,7 @@
     .center {
     text-align: center;
     font-family: 'Pacifico',cursive;
+    
     }
     a {
     color:#636363;
@@ -62,6 +63,7 @@
     font-weight:400;
     font-size:40px;
     color:#636363;
+    font-family:'Work Sans',sans-serif;
     }
 
 
@@ -190,4 +192,4 @@
     @font-face{
         font-family: 'Pacifico', cursive;
         src: url("https://fonts.googleapis.com/css?family=Pacifico")
-      } */
+      } 
