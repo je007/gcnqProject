@@ -1,11 +1,11 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
     font-family: 'Work Sans',sans-serif;
     background:#f4f4ef;
     }
-    
-    
+
+
     .center {
     text-align: center;
     font-family: 'Pacifico',cursive;
@@ -15,16 +15,16 @@ body {
     text-decoration: none;
     transition:all 0.5s ease-in;
     }
-    
-    
+
+
     a:hover {
     text-decoration: underline;
     }
-    
-    
-    /* Navigation */
-    
-    
+
+
+    Navigation
+
+
     .navbar {
     background:#fff;
     text-align:center;
@@ -35,8 +35,8 @@ body {
     align-items: center;
     box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
     }
-    
-    
+
+
     .navbar h2 {
     margin:0;
     font-weight:200;
@@ -44,9 +44,9 @@ body {
     letter-spacing: 4px;
     font-family:'Work Sans',sans-serif;
     }
-    
-    
-    /* Post Styles */
+
+
+    Post Styles
     .post-container {
     background:#fff;
     padding:50px;
@@ -55,24 +55,24 @@ body {
     box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
     font-family:'Work Sans',sans-serif;
     }
-    
-    
+
+
     .post_heading {
     text-align:center;
     font-weight:400;
     font-size:40px;
     color:#636363;
     }
-    
-    
+
+
     .form {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     }
-    
-    
+
+
     .form input {
     height:44px;
     padding-left:15px;
@@ -85,8 +85,8 @@ body {
     outline:none;
     width:80%;
     }
-    
-    
+
+
     .form textarea {
     width:80%;
     max-width:80%;
@@ -101,11 +101,11 @@ body {
     box-shadow: 0 2px 2px 0 rgba(46, 60, 73, 0.05);
     outline:none;
     }
-    
-    
+
+
     /* All Posts */
-    
-    
+
+
     .all_post_heading {
     text-align:center;
     font-weight:400;
@@ -113,18 +113,19 @@ body {
     color:#636363;
     word-wrap: break-word;
     }
-    
-    
+
     .post {
     background:#fff;
-    width:60%;
-    margin:0 auto;
+    width:.25%;
+    float: left;
+    display: table;
+    margin: 0 auto;
     padding:30px;
     margin-bottom:20px;
     box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
     }
-    
-    
+
+
     .form button {
     background:#02b3e4;
     padding:15px 40px;
@@ -135,8 +136,8 @@ body {
     border:none;
     font-size:20px;
     }
-    
-    
+
+
     .post_title {
     text-align:center;
     font-weight:400;
@@ -144,8 +145,8 @@ body {
     color:#636363;
     word-wrap: break-word;
     }
-    
-    
+
+
     .post_message {
     font-size:25px;
     font-weight: 200;
@@ -153,13 +154,13 @@ body {
     text-align:center;
     word-wrap: break-word
     }
-    
-    
+
+
     .control-buttons {
     display:flex;
     }
-    
-    
+
+
     .delete {
     background: #ff7777;
     border:none;
@@ -171,8 +172,8 @@ body {
     outline: none;
     color:#fff;
     }
-    
-    
+
+
     .edit {
     background:#02b3e4;;
     border:none;
@@ -188,5 +189,5 @@ body {
 
     @font-face{
         font-family: 'Pacifico', cursive;
-        src: url("https://fonts.googleapis.com/css?family=Pacifico") 
-      }
+        src: url("https://fonts.googleapis.com/css?family=Pacifico")
+      } */

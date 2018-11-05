@@ -8,188 +8,226 @@ body {
 
 
   .center {
-  text-align: center;
-  color: #3498DB;
-  font-weight: bold;
+    text-align: center;
+    color:white;
+    font-size: 40px;
+    font-weight: bolder;
 
   }
+
   a {
-  color:#636363;
-  text-decoration: none;
-  transition:all 0.5s ease-in;
+    color:#636363;
+    text-decoration: none;
+    transition:all 0.5s ease-in;
   }
 
 
   a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
   }
 
 
-
-
-  /* Navigation */
-
-
   .navbar {
-  background:#A2D9CE  ;
-  text-align:center;
-  padding:1.5rem 0;
-  width:100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
+    background:#A2D9CE;
+    text-align:center;
+    padding:20px 0;
+    max-width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
   }
 
 
   .navbar h2 {
-  margin:0;
-  font-weight:200;
-  font-size:30px;
-  letter-spacing: 4px;
-  font-family:'Work Sans',sans-serif;
+    margin:0;
+    font-weight:200;
+    font-size:30px;
+    letter-spacing: 4px;
+    font-family:'Work Sans',sans-serif;
   }
 
 
-  /* Post Styles */
-  .post-container {
-  background:#A2D9CE;
-  padding:50px;
-  width:50%;
-  margin:40px auto;
-  box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
-  font-family:'Work Sans',sans-serif;
+  .post_container {
+    background:#A2D9CE;
+    padding:25px;
+    width:27.5%;
+    height: 250px;
+    margin:1.1%;
+    display: flex;
+    flex-wrap: wrap;
+    float:left;
+    box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
+    font-family:'Work Sans',sans-serif;
+    border-radius: 45px;
 
   }
 
 
   .post_heading {
-  text-align:center;
-  font-weight:400;
-  font-size:40px;
-  color:#3498DB;
-  }
+    text-align:center;
+    font-weight:400;
+    font-size:40px;
+    color:#3498DB;
+    }
 
+
+  .form_container {
+    background: #A2D9CE;
+    padding-bottom: 25px;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
+    font-family:'Work Sans',sans-serif;
+    border-radius: 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: center;
+    }
 
   .form {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-
 
   .form input {
-  height:44px;
-  padding-left:15px;
-  padding-right:15px;
-  border: 1px solid #dbe2e8;
-  font-size:14px;
-  border-radius:2px;
-  color:#636363;
-  box-shadow: 0 2px 2px 0 rgba(46, 60, 73, 0.05);
-  outline:none;
-  width:80%;
-  }
+    width: 100%;
+    height:44px;
+    padding-left:15px;
+    padding-right:15px;
+    justify-content: center;
+    border: 1px solid #dbe2e8;
+    font-size:14px;
+    border-radius:2px;
+    color:#636363;
+    box-shadow: 0 2px 2px 0 rgba(46, 60, 73, 0.05);
+    outline:none;
+    }
 
 
   .form textarea {
-  width:80%;
-  max-width:80%;
-  padding-left:15px;
-  padding-right:15px;
-  padding-top:15px;
-  border: 1px solid #dbe2e8;
-  font-size:14px;
-  border-radius:2px;
-  color:#636363;
-  font-family: 'Work Sans,',sans-serif;
-  box-shadow: 0 2px 2px 0 rgba(46, 60, 73, 0.05);
-  outline:none;
+    width: 100%;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:15px;
+    justify-content: center;
+    border: 1px solid #dbe2e8;
+    font-size:14px;
+    border-radius:2px;
+    color:#636363;
+    font-family: 'Work Sans,',sans-serif;
+    box-shadow: 0 2px 2px 0 rgba(46, 60, 73, 0.05);
+    outline:none;
   }
 
 
-  /* All Posts */
-
 
   .all_post_heading {
-  text-align:center;
-  font-weight:400;
-  font-size:40px;
-  color:#636363;
-  word-wrap: break-word;
+    text-align:center;
+    font-weight:400;
+    font-size:40px;
+    color:#636363;
+    word-wrap: break-word;
+  }
+
+  .post_author {
+    color: #636363;
   }
 
 
   .post {
-  background:#fff;
-  width:60%;
-  margin:0 auto;
-  padding:30px;
-  margin-bottom:20px;
-  box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
+    background:white;
+    margin:5px;
+    padding:40px;
+    box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
+    border-radius: 45px;
+  }
+
+  .post_container {
+    background:#A2D9CE;
+    padding:25px;
+    width:27.5%;
+    margin:1.1%;
+    display: flex;
+    box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
+    font-family:'Work Sans',sans-serif;
+    border-radius: 45px;
+
+  }
+
+  .individual_post {
+    background:white;
+    margin:5px;
+    padding:40px;
+    box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
+    border-radius: 45px;
   }
 
 
   .form button {
-  background:#02b3e4;
-  padding:15px 40px;
-  text-align: center;
-  color:#fff;
-  font-family:'Work Sans',sans-serif;
-  border-radius:4px;
-  border:none;
-  font-size:20px;
+    background:#02b3e4;
+    padding:15px 40px;
+    text-align: center;
+    color:#fff;
+    font-family:'Work Sans',sans-serif;
+    border-radius:4px;
+    border:none;
+    font-size:20px;
   }
 
 
   .post_title {
-  text-align:center;
-  font-weight:400;
-  font-size:40px;
-  color:#636363;
-  word-wrap: break-word;
+    text-align:center;
+    font-weight:400;
+    font-size:30px;
+    word-wrap: break-word;
   }
 
 
   .post_ingredients {
-  font-size:25px;
-  font-weight: 200;
-  line-height: 2.5rem;
-  text-align:left;
-  word-wrap: break-word
+    font-size:20px;
+    font-weight: 300;
+    line-height: 1.5rem;
+    text-align:left;
+    word-wrap: break-word
   }
 
 
   .control-buttons {
-  display:flex;
+    display:flex;
+    justify-content: space-between;
   }
 
 
   .delete {
-  background: #ff7777;
-  border:none;
-  text-align: center;
-  font-size:20px;
-  padding:10px 25px;
-  border-radius:20px;
-  cursor:pointer;
-  outline: none;
-  color:#fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10;
+    background: none;
+    font-family: 'Work Sans',sans-serif;
+    color: red;
+    border: 2px solid red;
+    border-radius: 4px;
   }
 
 
   .edit {
-  background:#02b3e4;;
-  border:none;
-  text-align: center;
-  font-size:20px;
-  padding:10px 25px;
-  border-radius:20px;
-  cursor:pointer;
-  margin-right:auto;
-  outline: none;
-  color:#fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10;
+    background: none;
+    font-family: 'Work Sans',sans-serif;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 4px;
   }
 
 @font-face{

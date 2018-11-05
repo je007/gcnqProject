@@ -28,19 +28,14 @@ router.post('/post', function (req, res) {
 router.get('/editPost/:id', function (req, res, next) {
     let post_id = parseInt(req.params.id);
     models.Post
-        .find({
+        .findOne({
             where: {
-                post_id: postId
-            }
+                id: post_id
+            },
+            include: ['author']
         })
         .then(post => {
-            res.render('Post', {
-                post_title: req.body.postTitle,
-                post_ingredients: req.body.postIngredients,
-                post_steps: req.body.postSteps,
-                user_id: 1,
-                id: postId
-            })
+            res.send(post);
         })
 })
 
