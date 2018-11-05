@@ -13,9 +13,15 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.json());
 
+if(process.env.NODE_ENV = "production") {
+  app.use(express.static('client/build'));
+}
+
 const postRoutes = require('./routes/post');
 
 app.use('/', postRoutes);
+
+app.use('*', (req, res) => res.sendFile('client/build/index.html'));
 
 //This will sync the model structure with the database
 //Be careful, the force:true will destory the tables and recreate them

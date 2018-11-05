@@ -16,7 +16,7 @@ class PostForm extends Component {
             editing: false
         }
 
-        axios.post('http://localhost:5000/post', {
+        axios.post('/post', {
             postTitle: title,
             postIngredients: ingredients,
             postSteps: steps
@@ -33,18 +33,18 @@ class PostForm extends Component {
     }
     render() {
         return (
-            <div className="post-container">
+            <div className="form_container">
                 <h1 className="post_heading">Create Recipe</h1>
                 <form className="form" onSubmit={this.handleSubmit} >
-                    <img src="https://www.selekt.in/static/selekt/pics/typing4.gif?v=cae3c90a" height="88" width="146"/> 
+                    <img src="https://www.selekt.in/static/selekt/pics/typing4.gif?v=cae3c90a" height="50" width="90" className="title"/>
                     <input required type="text" ref={(input) => this.getTitle = input}
-                        placeholder="Recipe Title" /><br /><br />
-                    <img src="http://www.brodericksbrothers.com/wp-content/themes/brodericks_theme/img/factory/ingredients.gif" height="154.5" width="141.5"/>
+                        placeholder="Recipe Title" className="title" />
+                    <img src="http://www.brodericksbrothers.com/wp-content/themes/brodericks_theme/img/factory/ingredients.gif" height="50" width="45" className="ingredients"/>
                     <textarea required rows="5" ref={(input) => this.getIngredients = input}
-                        cols="28" placeholder="Comma Separated Ingredients" /><br /><br />
-                    <img src="https://66.media.tumblr.com/ed35624792967d90766ac4178ccd9c5f/tumblr_inline_mu0dumfcmS1rg56wj.gif" height="57" width="220"/>
+                        cols="28" placeholder="Comma Separated Ingredients" className="ingredients"/>
+                    <img src="https://66.media.tumblr.com/ed35624792967d90766ac4178ccd9c5f/tumblr_inline_mu0dumfcmS1rg56wj.gif" height="50" width="200" className="steps"/>
                     <textarea required rows="5" ref={(input) => this.getSteps = input}
-                        cols="28" placeholder="Comma Separated Steps" /><br /><br />
+                        cols="28" placeholder="Comma Separated Steps" className="steps" />
                     <button>Post</button>
                 </form>
             </div>
