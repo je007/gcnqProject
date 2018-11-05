@@ -7,7 +7,7 @@ import axios from 'axios';
 
 class AllPost extends Component {
     componentDidMount = () => {
-        axios.get('http://localhost:5000').then(res => this.props.dispatch({type:'LOAD_POSTS', data:res.data}));
+        axios.get('/all').then(res => this.props.dispatch({type:'LOAD_POSTS', data:res.data}));
     }
 
     render() {

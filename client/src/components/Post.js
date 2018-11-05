@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 class Post extends Component {
   handleChange = () => {
-    axios.delete(`http://localhost:5000/editPost/${this.props.post.id}/delete`)
+    axios.delete(`/editPost/${this.props.post.id}/delete`)
       .then(res => {
         this.props.dispatch({
             type: 'DELETE_POST',

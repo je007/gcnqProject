@@ -13,7 +13,7 @@ class Post extends Component {
 
   componentDidMount = () => {
     console.log(this.props);
-    axios.get(`http://localhost:5000/editPost/${this.props.match.params.id}`)
+    axios.get(`/editPost/${this.props.match.params.id}`)
       .then(res => {
         console.log(res.data);
         this.setState({post:res.data});
@@ -21,7 +21,7 @@ class Post extends Component {
   }
 
   handleChange = () => {
-    axios.delete(`http://localhost:5000/editPost/${this.state.post.id}/delete`)
+    axios.delete(`/editPost/${this.state.post.id}/delete`)
       .then(res => {
         this.props.dispatch({
             type: 'DELETE_POST',

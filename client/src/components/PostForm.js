@@ -16,7 +16,7 @@ class PostForm extends Component {
             editing: false
         }
 
-        axios.post('http://localhost:5000/post', {
+        axios.post('/post', {
             postTitle: title,
             postIngredients: ingredients,
             postSteps: steps
@@ -36,7 +36,7 @@ class PostForm extends Component {
             <div className="form_container">
                 <h1 className="post_heading">Create Recipe</h1>
                 <form className="form" onSubmit={this.handleSubmit} >
-                    <img src="https://www.selekt.in/static/selekt/pics/typing4.gif?v=cae3c90a" height="88" width="146"/> 
+                    <img src="https://www.selekt.in/static/selekt/pics/typing4.gif?v=cae3c90a" height="88" width="146"/>
                     <input required type="text" ref={(input) => this.getTitle = input}
                         placeholder="Recipe Title" /><br /><br />
                     <img src="http://www.brodericksbrothers.com/wp-content/themes/brodericks_theme/img/factory/ingredients.gif" height="154.5" width="141.5"/>

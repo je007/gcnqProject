@@ -15,7 +15,7 @@ class EditComponent extends Component {
             editing: true
         }
 
-        axios.put(`http://localhost:5000/editPost/${this.props.post.id}`, {
+        axios.put(`/editPost/${this.props.post.id}`, {
             postTitle: newTitle,
             postIngredients: newIngredients,
             postSteps: newSteps

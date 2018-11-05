@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 
-router.get('/', function (req, res, next) {
+router.get('/all', function (req, res, next) {
     models.Post.findAll({
         include: ['author']
     }).then((posts) => {
