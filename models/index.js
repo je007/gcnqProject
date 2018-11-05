@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('mysql://root:Root60611@localhost/gcnq');
+const sequelize = new Sequelize('mysql://root:CaliLife@localhost/gcnq');
 
 sequelize
   .authenticate()
