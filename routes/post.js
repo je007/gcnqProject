@@ -26,11 +26,11 @@ router.post('/post', function (req, res) {
 });
 
 router.get('/editPost/:id', function (req, res, next) {
-    let post_id = parseInt(req.params.id);
+    let postId = parseInt(req.params.id);
     models.Post
         .findOne({
             where: {
-                id: post_id
+                id: postId
             },
             include: ['author']
         })

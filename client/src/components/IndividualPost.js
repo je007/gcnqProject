@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-class Post extends Component {
+class IndividualPost extends Component {
   state = {
     post: {
       post_ingredients: "",
       post_steps: "",
+      id: "",
       author: {}
     }
   }
 
   componentDidMount = () => {
-    console.log(this.props);
     axios.get(`/editPost/${this.props.match.params.id}`)
       .then(res => {
-        console.log(res.data);
         this.setState({post:res.data});
     });
   }
@@ -46,15 +46,24 @@ class Post extends Component {
         return (
             <div className="individual_post_container">
             <div key={this.state.post.id} className="individual_post">
-                <h2 className="post_title">{this.state.post.post_title}</h2>
-                <h3 className="post_author">By: {this.state.post.author.realName}</h3>
-                <h3 className="post_ingredients">Ingredients:</h3>
-                <p className="post_ingredients" >{ingredientList}</p>
-                <h3 className="post_steps">Directions:</h3>
-                <p className="post_steps">{stepList}</p>
+                <h2 className="individual_post_title">{this.state.post.post_title}</h2>
+                <h3 className="individual_post_author">By: {this.state.post.author.realName}</h3>
+                <h3 className="individual_post_ingredients">Ingredients:</h3>
+                <p className="individual_post_ingredients" >{ingredientList}</p>
+                <h3 className="indpost_steps">Directions:</h3>
+                <p className="individual_post_steps">{stepList}</p>
                 <div className="control-buttons">
-                    <button className="edit"
-                        onClick={() => this.props.dispatch({ type: 'EDIT_POST', id: this.state.post.id })
+                <button className="edit"
+                        onClick={() => {axios.get(`/editPost/${this.props.match.params.id}`)
+                          .then(res => {
+                            this.props.dispatch({
+                                type: 'EDIT_POST',
+                                data: res.data
+                            });
+                            window.location =`/edit/post/${this.state.post.id}`;
+                        });
+                      }
+
                         }
                     >Edit</button>
                     <button className="delete"
@@ -66,4 +75,5 @@ class Post extends Component {
         );
     }
 }
-export default connect()(Post);
+
+export default connect()(IndividualPost);

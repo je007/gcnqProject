@@ -4,29 +4,19 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class Post extends Component {
-  handleChange = () => {
-    axios.delete(`/editPost/${this.props.post.id}/delete`)
-      .then(res => {
-        this.props.dispatch({
-            type: 'DELETE_POST',
-            data: res.data
-        });
-        window.location = '/';
-    });
-  }
 
     render() {
-      const ingredientString = this.props.post.post_ingredients;
-      const ingredientSplit = ingredientString.split(', ');
-      const ingredientList = ingredientSplit.map((ingredient) =>
-        <li>{ingredient}</li>
-      );
-
-      const stepString = this.props.post.post_steps;
-      const stepSplit = stepString.split(', ');
-      const stepList = stepSplit.map((step) =>
-        <li>{step}</li>
-      );
+      // const ingredientString = this.props.post.post_ingredients;
+      // const ingredientSplit = ingredientString.split(', ');
+      // const ingredientList = ingredientSplit.map((ingredient) =>
+      //   <li>{ingredient}</li>
+      // );
+      //
+      // const stepString = this.props.post.post_steps;
+      // const stepSplit = stepString.split(', ');
+      // const stepList = stepSplit.map((step) =>
+      //   <li>{step}</li>
+      // );
 
         return (
             <div key={this.props.post.id} className="post">
