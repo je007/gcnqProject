@@ -5,8 +5,8 @@ body {
   background: #D5DBDB;
   font-weight: bold;
   }
-  
-  
+
+
   .center {
   text-align: center;
   color: #3498DB;
@@ -90,8 +90,8 @@ body {
   justify-content: center;
   align-items: center;
   }
-  
-  
+
+
   .form input {
   height:44px;
   padding-left:15px;
@@ -104,8 +104,8 @@ body {
   outline:none;
   width:80%;
   }
-  
-  
+
+
   .form textarea {
   width:80%;
   max-width:80%;
@@ -132,8 +132,8 @@ body {
   color:#636363;
   word-wrap: break-word;
   }
-  
-  
+
+
   .post {
   background:#fff;
   width:60%;
@@ -155,8 +155,8 @@ body {
   border:none;
   font-size:20px;
   }
-  
-  
+
+
   .post_title {
   text-align:center;
   font-weight:400;
@@ -191,8 +191,8 @@ body {
   outline: none;
   color:#fff;
   }
-  
-  
+
+
   .edit {
   background:#02b3e4;;
   border:none;
