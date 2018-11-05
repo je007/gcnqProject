@@ -26,9 +26,12 @@ body {
   .center {
     text-align: center;
     color:white;
-    font-size: 60px;
+    font-size: 100px;
     font-weight: bolder;
     font-family: 'Pacifico', cursive;
+    border: 5px solid #3498DB;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .navbar {
