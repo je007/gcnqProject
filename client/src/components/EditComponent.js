@@ -50,17 +50,22 @@ class EditComponent extends Component {
 
     render() {
         return (
-            <div key={this.state.post.id} className="post">
+
+            <div className="form_container" key={this.state.post.id} >
                 <form className="form" onSubmit={this.handleEdit} >
+                    <img src="https://www.selekt.in/static/selekt/pics/typing4.gif?v=cae3c90a" height="50" width="90" className="title"/>
                     <input required type="text" ref={(input) => this.getTitle = input}
-                        defaultValue={this.state.post.post_title} placeholder="Recipe Title" className="title" /><br /><br />
+                        defaultValue={this.state.post.post_title} placeholder="Recipe Title" />
+                    <img src="http://www.brodericksbrothers.com/wp-content/themes/brodericks_theme/img/factory/ingredients.gif" height="50" width="45" className="ingredients"/>
                     <textarea required rows="5" ref={(input) => this.getIngredients = input}
-                        defaultValue={this.state.post.post_ingredients} cols="28" placeholder="Comma Separated Ingredients" className="ingredients"/><br /><br />
+                        defaultValue={this.state.post.post_ingredients} cols="28" placeholder="Comma Separated Ingredients" />
+                    <img src="https://66.media.tumblr.com/ed35624792967d90766ac4178ccd9c5f/tumblr_inline_mu0dumfcmS1rg56wj.gif" height="50" width="200" className="steps"/>
                     <textarea required rows="5" ref={(input) => this.getSteps = input}
-                        defaultValue={this.state.post.post_steps} cols="28" placeholder="Comma Separated Steps" className="steps" /><br /><br />
+                        defaultValue={this.state.post.post_steps} cols="28" placeholder="Comma Separated Steps" />
                     <button>Update</button>
                 </form>
-            </div>
+              </div>
+
         );
     }
 }

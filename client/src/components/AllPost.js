@@ -14,12 +14,15 @@ class AllPost extends Component {
         return (
             <div>
                 <h1 className="post_heading">All Recipes</h1>
-                {this.props.posts.map((post) => (
+                <div className="container">
+                  {this.props.posts.map((post) => (
                     <div className="post_container" key={post.id}>
                         {post.editing ? <EditComponent post={post} key={post.id} /> : <Post post={post}
                             key={post.id} />}
                     </div>
+
                 ))}
+                </div>
             </div>
         );
     }

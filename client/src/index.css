@@ -23,16 +23,19 @@ body {
   }
 
   /*Header*/
+
   .center {
-    text-align: center;
+    margin: 10px;
     color:white;
+    font-family: 'Pacifico', cursive;
     font-size: 60px;
     font-weight: bolder;
-    font-family: 'Pacifico', cursive;
+    text-align: center;
   }
 
   .navbar {
     background:#A2D9CE;
+    border: 6px solid #BABABA;
     text-align:center;
     padding:20px 0;
     max-width:100%;
@@ -80,6 +83,7 @@ body {
     padding-bottom: 25px;
     display: flex;
     background: #A2D9CE;
+    border: 6px solid #BABABA;
     color:#3498DB;
     font-family: 'Pacifico', cursive;
     font-size:40px;
@@ -160,58 +164,67 @@ body {
   /*Post*/
 
   .post {
-    margin:2%;
-    padding:40px;
+    height:100%;
     background:white;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: inline-block;
     justify-content: center;
+    text-align: center;
     box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
     border-radius: 45px;
   }
 
   .post_title {
+    color: black;
     font-weight:400;
     font-size:30px;
     text-align:center;
     word-wrap: break-word;
   }
 
+  .post_author {
+    color: #636363;
+  }
+
+  .post_ingredients {
+    font-size:20px;
+    font-weight: 300;
+    line-height: 1.5rem;
+    text-align:left;
+    word-wrap: break-word
+  }
+
   /*Individual Post*/
 
   .individual_post_container {
-    width:60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    display: flex;
+    width: 60%;
+    padding: 25px;
+    margin-top: 5%;
+    margin-left: 18%;
+    margin-right: 18%;
     background: #A2D9CE;
-    text-align:center;
-    flex-direction: column;
+    border: 6px solid #BABABA;
+    font-family: 'Work Sans',sans-serif;
     justify-content: center;
     align-items: center;
-    border-radius: 45px;
     box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
-    float: center;
+    border-radius: 45px;
   }
 
   .individual_post {
     width: 80%;
-    margin:2%;
-    padding:40px;
+    margin: 2%;
+    padding: 40px;
     background:white;
+    justify-content: center;
     box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
     border-radius: 45px;
   }
 
   .individual_post_title {
-    font-weight:400;
-    font-size:30px;
-    text-align:center;
+    color: black;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
     word-wrap: break-word;
   }
 
@@ -220,10 +233,10 @@ body {
   }
 
   .individual_post_ingredients {
-    font-size:20px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 1.5rem;
-    text-align:left;
+    text-align: left;
     word-wrap: break-word
   }
 
@@ -258,15 +271,24 @@ body {
 
   /*All Posts*/
 
+  .container {
+    width: auto;
+    padding: 10px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .post_container {
-    width:27.5%;
+    height: 300px;
     padding:25px;
-    margin:1.1%;
     background:#A2D9CE;
+    border: 6px solid #BABABA;
     font-family:'Work Sans',sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    grid-column-start: auto span 1;
+    align-self: center;
     box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
     border-radius: 45px;
   }
@@ -277,50 +299,8 @@ body {
     font-size:40px;
     text-align:center;
     justify-content: center;
-    }
-
-  /* .post-container {
-    width:50%;
-    margin:40px auto;
-    padding:50px;
-    background:#A2D9CE;
     font-family: 'Pacifico', cursive;
-    box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
-  } */
-
-  .post_author {
-    color: #636363;
-  }
-
-  .post_ingredients {
-    font-size:20px;
-    font-weight: 300;
-    line-height: 1.5rem;
-    text-align:left;
-    word-wrap: break-word
-  }
-
-  /*Edit Component*/
-
-
-
-
-
-
-
-
-
-  /* .all_post_heading {
-    color:#636363;
-    font-weight:400;
-    font-size:40px;
-    text-align:center;
-    word-wrap: break-word;
-  } */
-
-
-
-
+    }
 
 
 @font-face{
