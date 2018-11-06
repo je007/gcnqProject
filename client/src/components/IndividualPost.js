@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 class IndividualPost extends Component {
   state = {
@@ -54,17 +53,17 @@ class IndividualPost extends Component {
                 <p className="individual_post_steps">{stepList}</p>
                 <div className="control-buttons">
                 <button className="edit"
-                        onClick={() => {axios.get(`/editPost/${this.props.match.params.id}`)
-                          .then(res => {
-                            this.props.dispatch({
-                                type: 'EDIT_POST',
-                                data: res.data
-                            });
+                    onClick={() =>
+                      {axios.get(`/editPost/${this.props.match.params.id}`)
+                        .then(res => {
+                          this.props.dispatch({
+                              type: 'EDIT_POST',
+                              data: res.data
+                          });
                             window.location =`/edit/post/${this.state.post.id}`;
-                        });
-                      }
-
+                          });
                         }
+                      }
                     >Edit</button>
                     <button className="delete"
                         onClick={() => this.handleChange(this.state.post.id)}
